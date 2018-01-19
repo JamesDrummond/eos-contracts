@@ -1,5 +1,5 @@
 #include "keyvalue.hpp"
-#include "simpledb.gen.hpp"
+#include "keyvalue.gen.hpp"
 
 #include <eoslib/db.hpp>
 #include <eoslib/types.hpp>
