@@ -1,4 +1,4 @@
-#include "simpledb.hpp"
+#include "keyvalue.hpp"
 #include "simpledb.gen.hpp"
 
 #include <eoslib/db.hpp>
