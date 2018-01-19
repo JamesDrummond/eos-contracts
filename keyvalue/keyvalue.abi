@@ -1,0 +1,24 @@
+{
+  "types": [],
+  "structs": [{
+      "name": "key_value1",
+      "base": "",
+      "fields": {
+        "key": "string",
+        "value": "string"
+      }
+    }
+  ],
+  "actions": [{
+      "table_name": "keyvalue1",
+      "index_type": "str",
+      "key_names": [
+        "key"
+      ],
+      "key_types": [
+        "string"
+      ],
+      "type": "key_value1"
+    }
+  ]
+}
