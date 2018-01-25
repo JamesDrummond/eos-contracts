@@ -11,7 +11,7 @@ extern "C" {
    }
 
    void apply( uint64_t code, uint64_t action ) {
-      if( code == N(record) ) {
+      if( code == N(keyvalue) ) {
          if( action == N(insert) ) {
             // eosc push message record insert '{"key":"a", "value":"aa"}' -S record
             // eosc get table record record record1
