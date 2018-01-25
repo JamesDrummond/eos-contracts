@@ -10,6 +10,11 @@
     }
   ],
   "actions": [{
+      "action_name": "insert",
+      "type": "keyvalue1"
+    }
+  ],
+  "tables": [{
       "table_name": "keyvalue1",
       "index_type": "str",
       "key_names": [
