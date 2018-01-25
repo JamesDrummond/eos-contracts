@@ -19,7 +19,7 @@ extern "C" {
             eosio::print("Inserting record\n");
             eosio::dump(r);
             bytes b = eosio::raw::pack(r.value);
-            uint32_t err = store_str( N(keyvalue), (char *)r.key.get_data(), r.key.get_size(), (char*)b.data, b.len);
+            uint32_t err = store_str( N(keyvalue), N(record), (char *)r.key.get_data(), r.key.get_size(), (char*)b.data, b.len);
          } else {
             assert(0, "unknown message");
          }
