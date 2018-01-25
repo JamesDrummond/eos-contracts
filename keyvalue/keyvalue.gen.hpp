@@ -4,7 +4,7 @@
 #include <eoslib/raw_fwd.hpp>
 
 namespace eosio { namespace raw {
-   template<typename Stream> inline void unpack( Stream& s, key_value1& value ) {
+   template<typename Stream> inline void unpack( Stream& s, record& value ) {
       raw::unpack(s, value.key);
       raw::unpack(s, value.value);
    }
@@ -23,13 +23,12 @@ namespace eosio {
       eosio::free(data);
       return value;
    }
-   void dump(const key_value1& value, int tab=0) {
+   void dump(const record& value, int tab=0) {
       print_ident(tab);print("key:[");print("]\n");
       print_ident(tab);print("value:[");print("]\n");
    }
    template<>
-   key_value1 current_message<key_value1>() {
-      return current_message_ex<key_value1>();
+   record current_message<record>() {
+      return current_message_ex<record>();
    }
 } //eosio
-

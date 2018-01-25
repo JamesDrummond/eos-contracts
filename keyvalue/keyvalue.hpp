@@ -1,10 +1,10 @@
 #include <eoslib/eos.hpp>
 #include <eoslib/string.hpp>
 
-/* @abi action insertkv1
+/* @abi action insert
  * @abi table
 */
-struct key_value1 {
+struct record {
    eosio::string key;
    eosio::string value;
 };
