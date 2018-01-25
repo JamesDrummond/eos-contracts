@@ -4,6 +4,10 @@
 #include <eoslib/raw_fwd.hpp>
 
 namespace eosio { namespace raw {
+   template<typename Stream> inline void pack( Stream& s, record& value ) {
+      raw::pack(s, value.key);
+      raw::pack(s, value.value);
+   }
    template<typename Stream> inline void unpack( Stream& s, record& value ) {
       raw::unpack(s, value.key);
       raw::unpack(s, value.value);
