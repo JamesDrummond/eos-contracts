@@ -13,13 +13,13 @@ extern "C" {
    void apply( uint64_t code, uint64_t action ) {
       if( code == N(keyvalue) ) {
          if( action == N(insert) ) {
-            // eosc push message record insert '{"key":"a", "value":"aa"}' -S record
-            // eosc get table record record record1
+            // eosc push message keyvalue insert '{"key":"a", "value":"aa"}' -S keyvalue
+            // eosc get table keyvalue keyvalue record
             auto r = eosio::current_message<record>();
             eosio::print("Inserting record\n");
             eosio::dump(r);
             bytes b = eosio::raw::pack(r.value);
-            uint32_t err = store_str( N(record), (char *)r.key.get_data(), r.key.get_size(), (char*)b.data, b.len);
+            uint32_t err = store_str( N(keyvalue), (char *)r.key.get_data(), r.key.get_size(), (char*)b.data, b.len);
          } else {
             assert(0, "unknown message");
          }
