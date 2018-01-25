@@ -1,7 +1,7 @@
 {
   "types": [],
   "structs": [{
-      "name": "key_value1",
+      "name": "record",
       "base": "",
       "fields": {
         "key": "string",
@@ -10,12 +10,12 @@
     }
   ],
   "actions": [{
-      "action_name": "insert",
-      "type": "keyvalue1"
+      "name": "insert",
+      "type": "record"
     }
   ],
   "tables": [{
-      "table_name": "keyvalue1",
+      "name": "record",
       "index_type": "str",
       "key_names": [
         "key"
@@ -23,7 +23,6 @@
       "key_types": [
         "string"
       ],
-      "type": "key_value1"
-    }
-  ]
+      "type": "record"
+  }]
 }
